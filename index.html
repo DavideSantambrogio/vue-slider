@@ -27,7 +27,8 @@
                     <div class="thumbs">
                         <div @click="Prev" class="prev"></div>
                         <div @click="Next" class="next"></div>
-                        <div v-for="(element, index) in slides"
+                        <div class="thumb" 
+                            v-for="(element, index) in games"
                             :class="activeIndex === index ? 'active' : ''"                      
                             @click="activeIndex = index">                         
                             <img :src="element.image" alt="" />

@@ -16,17 +16,18 @@
     width: 700px;
     height: 300px;
     position: relative;
+    display: flex;
 }
 
 .item img {
-    width: 100%;
+    width: 550px;
     height: 100%;
     object-fit: cover;
 }
 
 .item .text {
     position: absolute;
-    right: 20px;
+    right: 200px;
     bottom: 20px;
     text-align: right;
     color: white;
@@ -42,6 +43,7 @@
 .thumb {
     height: calc((300px) / 5);
     opacity: 0.5;
+    width: 150px;
 }
 
 .thumb img {
