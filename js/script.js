@@ -41,7 +41,13 @@ const app = createApp({
         this.activeIndex--;
       }
     },
-    
+    Next: function () {
+        if (this.activeIndex === this.games.length - 1) {
+          this.activeIndex = 0;
+        } else {
+          this.activeIndex++;
+        }
+      },
   },
   
 }).mount("#app");
