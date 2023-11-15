@@ -3,7 +3,7 @@ const { createApp } = Vue;
 const app = createApp({
   data() {
     return {
-      games: [
+      slides: [
         {
           image: "img/01.webp",
           title: "Marvel's Spiderman Miles Morale",
@@ -31,18 +31,23 @@ const app = createApp({
         },
       ],
       activeIndex: 0,
+      timer: null
     };
+  },
+//   timer
+  created(){
+    this.timer = setInterval(this.Next, 2000)
   },
   methods: {
     Prev: function () {
       if (this.activeIndex === 0) {
-        this.activeIndex = this.games.length - 1;
+        this.activeIndex = this.slides.length - 1;
       } else {
         this.activeIndex--;
       }
     },
     Next: function () {
-        if (this.activeIndex === this.games.length - 1) {
+        if (this.activeIndex === this.slides.length - 1) {
           this.activeIndex = 0;
         } else {
           this.activeIndex++;
